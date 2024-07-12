@@ -1,0 +1,67 @@
+/* Target the root element and define custom properties */
+:root {
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for base text */
+  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for section headings */
+  --font-size-small: 1.2rem; /* Custom property for small font size */
+  --font-size-medium: 1.6rem; /* Custom property for medium font size */
+  --font-size-large: 1.8rem; /* Custom property for large font size */
+  --font-size-x-large: 2.3rem; /* Custom property for extra large font size */
+  --font-size-xx-large: 4.8rem; /* Custom property for extra extra large font size */
+  --font-weight-regular: 400; /* Custom property for regular font weight */
+  --font-weight-bold: 700; /* Custom property for bold font weight */
+}
+
+/* Revisit the body declaration and reset its color to text-color */
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base); /* Set body's font-family to font-family-base */
+  font-size: var(--font-size-medium); /* Set body's font size to font-size-medium */
+  font-weight: var(--font-weight-regular); /* Set body's font weight to font-weight-regular */
+}
+
+/* Revisit the anchor elements declaration and reset their color to text-color */
+a {
+  color: var(--text-color);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden {
+  display: none;
+}
+
+/* Revisit the card-category declaration and reset its color to color-primary */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Revisit the section-tagline declaration and reset its color to color-primary */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Target all 6 levels of section headings and set their font-family to font-family-title */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold); /* Set the font weight of headings to font-weight-bold */
+}
+
+/* Target the html element and set its font size to 62.5% of the normal size */
+html {
+  font-size: 62.5%;
+}
+
+/* Set the font size of any fonts in the body to font-size-medium */
+body * {
+  font-size: var(--font-size-medium);
+}
