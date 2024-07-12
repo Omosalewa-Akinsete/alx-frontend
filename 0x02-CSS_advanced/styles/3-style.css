@@ -1,0 +1,34 @@
+/* Target the root element and define custom properties */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+/* Revisit the body declaration and reset its color to text-color */
+body {
+    color: var(--text-color);
+}
+
+/* Revisit the anchor elements declaration and reset their color to text-color */
+a {
+    color: var(--text-color);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Revisit the card-category declaration and reset its color to color-primary */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Revisit the section-tagline declaration and reset its color to color-primary */
+.section-tagline {
+    color: var(--color-primary);
+}
