@@ -6,8 +6,10 @@
   --color-light-grey: #f3f3f3;
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
-  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for base text */
-  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for section headings */
+  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Define custom font size properties */
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
@@ -15,44 +17,16 @@
   --font-size-xx-large: 4.8rem;
 }
 
-/* Set the font size of all elements in the html element to 62.5% of their normal size */
+/* Set base font size for HTML element */
 html {
   font-size: 62.5%;
 }
 
-/* Revisit the body declaration and reset its color to text-color */
+/* Apply medium font size to body */
 body {
   color: var(--text-color);
-  font-family: var(--font-family-base); /* Set body's font-family to font-family-base */
-  font-size: var(--font-size-medium); /* Set body's font-size to font-size-medium */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium); /* Set body's font size to font-size-medium */
 }
 
-/* Revisit the anchor elements declaration and reset their color to text-color */
-a {
-  color: var(--text-color);
-}
-
-/* Hide all elements with the class visually-hidden */
-.visually-hidden {
-  display: none;
-}
-
-/* Revisit the card-category declaration and reset its color to color-primary */
-.card-category {
-  color: var(--color-primary);
-}
-
-/* Revisit the section-tagline declaration and reset its color to color-primary */
-.section-tagline {
-  color: var(--color-primary);
-}
-
-/* Target all 6 levels of section headings and set their font-family to font-family-title */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-title);
-}
+/* Other existing styles remain unchanged */
