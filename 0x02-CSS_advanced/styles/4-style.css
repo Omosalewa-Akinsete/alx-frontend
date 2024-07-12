@@ -1,3 +1,4 @@
+/* Target the root element and define custom properties */
 :root {
   --color-primary: #d73953;
   --color-black: #090909;
@@ -5,14 +6,37 @@
   --color-light-grey: #f3f3f3;
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
-  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for base text */
+  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Custom font-family property for section headings */
 }
 
+/* Revisit the body declaration and reset its color to text-color */
 body {
-  font-family: var(--font-family-base);
+  color: var(--text-color);
+  font-family: var(--font-family-base); /* Set body's font-family to font-family-base */
 }
 
+/* Revisit the anchor elements declaration and reset their color to text-color */
+a {
+  color: var(--text-color);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden {
+  display: none;
+}
+
+/* Revisit the card-category declaration and reset its color to color-primary */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* Revisit the section-tagline declaration and reset its color to color-primary */
+.section-tagline {
+  color: var(--color-primary);
+}
+
+/* Target all 6 levels of section headings and set their font-family to font-family-title */
 h1,
 h2,
 h3,
@@ -20,20 +44,4 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-title);
-}
-
-a {
-  color: var(--text-color);
-}
-
-.visually-hidden {
-  display: none;
-}
-
-.card-category {
-  color: var(--color-primary);
-}
-
-.section-tagline {
-  color: var(--color-primary);
 }
