@@ -4,7 +4,7 @@
     --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Set body’s font-family to font-family-base */
+/* Set body's font-family to font-family-base */
 body {
     font-family: var(--font-family-base);
 }
@@ -14,7 +14,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
 }
 
-/* Existing links declaration */
+/* Links declaration */
 a {
-    /* Your existing styles for links */
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Card category declaration */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Section tagline declaration */
+.section-tagline {
+    color: var(--color-primary);
 }
