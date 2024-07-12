@@ -1,36 +1,39 @@
-/* Target the root element and define custom font-family properties */
 :root {
-    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Set body's font-family to font-family-base */
 body {
-    font-family: var(--font-family-base);
+  font-family: var(--font-family-base);
 }
 
-/* Create a new declaration targeting all 6 levels of section headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-title);
 }
 
-/* Links declaration */
 a {
-    text-decoration: none;
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
-/* Hide all elements with the class visually-hidden */
 .visually-hidden {
-    display: none;
+  display: none;
 }
 
-/* Card category declaration */
 .card-category {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
-/* Section tagline declaration */
 .section-tagline {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
