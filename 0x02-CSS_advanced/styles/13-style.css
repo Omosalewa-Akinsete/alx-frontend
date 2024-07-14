@@ -38,19 +38,19 @@ a[href] {
   text-decoration: none; /* Remove text decoration from anchor elements */
 }
 
-/* Target the visited state for links containing a hyperlink */
+/* Target the visited state for anchor elements */
 a[href]:visited {
-  font-style: italic; /* Italicize the text of visited links */
+  font-style: italic; /* Italicize the text */
 }
 
-/* Target the hover state for links containing a hyperlink */
+/* Target the hover state for anchor elements */
 a[href]:hover {
-  text-decoration: underline; /* Decorate links with an underline when hovering */
+  text-decoration: underline; /* Decorate the links with an underline when hovering */
 }
 
-/* Target the active state for links containing a hyperlink */
+/* Target the active state for anchor elements */
 a[href]:active {
-  background-color: var(--color-light-grey); /* Set the background color to color-light-grey when the link is active */
+  background-color: var(--color-light-grey); /* Set the background color to color-light-grey when active */
 }
 
 /* Hide all elements with the class visually-hidden */
@@ -100,3 +100,4 @@ html {
 body * {
   font-size: var(--font-size-medium);
 }
+iu
