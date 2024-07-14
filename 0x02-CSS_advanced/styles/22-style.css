@@ -1,0 +1,61 @@
+/* Custom property for section tagline margin */
+:root {
+    --section-tagline-margin: 0;
+}
+
+/* Section tagline styles */
+.section-tagline {
+    font-family: var(--font-family-title); /* Use title font family */
+    text-transform: var(--section-tagline-transform); /* Uppercase transform */
+    font-weight: var(--font-weight-bold); /* Use bold font weight */
+    margin: var(--section-tagline-margin); /* Set margin */
+}
+
+/* Styles for ul with class row */
+ul.row {
+    margin: 0; /* Set margins to 0 */
+    padding: 0; /* Set padding to 0 */
+    list-style: none; /* Remove default list styles */
+}
+
+/* Add a new row after each instance of the class row */
+.row::after {
+    content: ""; /* No content */
+    display: table; /* Display as table */
+    clear: both; /* Clear any floating elements on either side */
+}
+
+/* Styles for classes starting with col- */
+[class^="col-"] {
+    float: left; /* Float to the left */
+    padding: 0.5rem; /* Set padding to half of the root element */
+}
+
+/* Styles for col-1-3 class */
+.col-1-3 {
+    width: 33.33%; /* Set width to 33.33% of parent */
+}
+
+/* Styles for col-1-2 class */
+.col-1-2 {
+    width: 50%; /* Set width to 50% of parent */
+}
+
+/* Styles for footer-copyright class */
+.footer-copyright {
+    margin: 0; /* Remove margins */
+    font-size: var(--font-size-small); /* Set font size */
+    color: var(--text-color); /* Set foreground color */
+}
+
+/* Align text to the right for ul in footer class */
+.footer ul {
+    text-align: right; /* Align text to the right */
+}
+
+/* Styles for data-section-theme="dark" */
+[data-section-theme="dark"] {
+    --text-color: var(--color-white); /* Redefine text color */
+    --section-title-color: var(--color-white); /* Redefine section title color */
+    background-color: var(--color-black); /* Set background color */
+}
