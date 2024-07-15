@@ -1,56 +1,222 @@
-@import url('"https://registry.npmjs.org/normalize.css/-/normalize.css-8.0.1.tgz'); /* Import normalize.css to reset default styles */
-
-*, *:before, *:after {
-    box-sizing: border-box; /* Set box-sizing to border-box for all elements */
-}
-
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-    font-size: 62.5%; /* Set base font size to 10px for easier rem calculations */
+    line-height: 1.15; /* Improved text rendering */
+    -webkit-text-size-adjust: 100%; /* Prevents font size adjustments after orientation changes in iOS */
 }
 
+body {
+    margin: 0; /* Remove default margin */
+}
+
+main {
+    display: block; /* Define main as a block element */
+}
+
+h1 {
+    font-size: 2em; /* Set font size for h1 */
+    margin: .67em 0; /* Set margin for h1 */
+}
+
+hr {
+    box-sizing: content-box; /* Ensure hr respects box-sizing */
+    height: 0; /* Remove default height */
+    overflow: visible; /* Ensure hr overflows are visible */
+}
+
+pre {
+    font-family: monospace, monospace; /* Use monospaced font for pre */
+    font-size: 1em; /* Set font size for pre */
+}
+
+a {
+    background-color: transparent; /* Remove background color from links */
+}
+
+abbr[title] {
+    border-bottom: none; /* Remove default border from abbr */
+    text-decoration: underline; /* Add underline to abbr */
+    text-decoration: underline dotted; /* Add dotted underline to abbr */
+}
+
+b, strong {
+    font-weight: bolder; /* Set bold weight for b and strong */
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace; /* Use monospaced font for code, kbd, and samp */
+    font-size: 1em; /* Set font size for code, kbd, and samp */
+}
+
+small {
+    font-size: 80%; /* Set font size for small */
+}
+
+sub, sup {
+    font-size: 75%; /* Set font size for sub and sup */
+    line-height: 0; /* Remove line height for sub and sup */
+    position: relative; /* Set relative position for sub and sup */
+    vertical-align: baseline; /* Align sub and sup to baseline */
+}
+
+sub {
+    bottom: -.25em; /* Position sub lower */
+}
+
+sup {
+    top: -.5em; /* Position sup higher */
+}
+
+img {
+    border-style: none; /* Remove border from images */
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit; /* Inherit font family */
+    font-size: 100%; /* Inherit font size */
+    line-height: 1.15; /* Set line height */
+    margin: 0; /* Remove default margin */
+}
+
+button, input {
+    overflow: visible; /* Allow overflow for button and input */
+}
+
+button, select {
+    text-transform: none; /* Prevent text transformation for button and select */
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button; /* Use default button appearance */
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+    border-style: none; /* Remove inner border */
+    padding: 0; /* Remove inner padding */
+}
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+    outline: 1px dotted ButtonText; /* Add dotted outline for focus */
+}
+
+fieldset {
+    padding: .35em .75em .625em; /* Set padding for fieldset */
+}
+
+legend {
+    box-sizing: border-box; /* Ensure legend respects box-sizing */
+    color: inherit; /* Inherit color for legend */
+    display: table; /* Display legend as table */
+    max-width: 100%; /* Set max-width for legend */
+    padding: 0; /* Remove padding for legend */
+    white-space: normal; /* Normalize white space for legend */
+}
+
+progress {
+    vertical-align: baseline; /* Align progress to baseline */
+}
+
+textarea {
+    overflow: auto; /* Add auto overflow for textarea */
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box; /* Ensure checkbox and radio respect box-sizing */
+    padding: 0; /* Remove padding for checkbox and radio */
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto; /* Set height for number spin buttons */
+}
+
+[type=search] {
+    -webkit-appearance: textfield; /* Use default textfield appearance */
+    outline-offset: -2px; /* Offset outline for search */
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none; /* Remove search decoration */
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* Use default button appearance for file upload */
+    font: inherit; /* Inherit font properties */
+}
+
+details {
+    display: block; /* Display details as block */
+}
+
+summary {
+    display: list-item; /* Display summary as list-item */
+}
+
+template {
+    display: none; /* Hide template element */
+}
+
+[hidden] {
+    display: none; /* Hide hidden elements */
+}
+
+/* Define CSS variables for colors, fonts, sizes, and other reusable values */
 :root {
-    /* Define CSS variables for colors, fonts, sizes, and other reusable values */
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --font-family-base: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    --font-family-title: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
     --font-size-x-large: 2.3rem;
     --font-size-xx-large: 4.8rem;
+
     --font-weight-regular: 400;
     --font-weight-bold: 700;
+
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
+
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
+
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: calc(4% * 1rem);
+    --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 calc(3 * 1rem) 0;
+    --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
+
     --section-tagline-margin: 0;
 }
 
+/* Apply box-sizing: border-box to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 62.5%; /* Set base font size to 10px for easier rem calculations */
+}
+
 body {
-    color: var(--text-color); /* Set text color */
     font-family: var(--font-family-base); /* Set base font family */
     font-size: var(--font-size-medium); /* Set base font size */
     font-weight: var(--font-weight-regular); /* Set base font weight */
@@ -62,9 +228,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold); /* Set font weight for headings */
 }
 
+body {
+    color: var(--text-color); /* Set text color */
+}
+
 a:link {
-    color: var(--text-color); /* Set link color */
     text-decoration: none; /* Remove underline from links */
+    color: var(--text-color); /* Set link color */
 }
 
 a:visited {
@@ -77,60 +247,6 @@ a:hover {
 
 a:active {
     background-color: var(--color-light-grey); /* Set background color for active links */
-}
-
-.visually-hidden {
-    display: none; /* Hide elements visually */
-}
-
-[data-section-theme="dark"] {
-    --text-color: var(--color-white); /* Set text color for dark theme */
-    --section-title-color: var(--color-white); /* Set section title color for dark theme */
-    background-color: var(--color-black); /* Set background color for dark theme */
-}
-
-.section {
-    padding: var(--section-padding); /* Set section padding */
-}
-
-.section-header {
-    text-align: var(--section-header-align); /* Align section header */
-    padding: var(--section-header-padding); /* Set padding for section header */
-}
-
-.section-body {
-    padding: var(--section-body-padding); /* Set padding for section body */
-}
-
-.section-footer {
-    padding: var(--section-footer-padding); /* Set padding for section footer */
-    text-align: var(--section-footer-align); /* Align section footer */
-}
-
-.section-title {
-    font-family: var(--font-family-title); /* Set font family for section titles */
-    font-size: var(--font-size-xx-large); /* Set font size for section titles */
-    font-weight: var(--font-weight-bold); /* Set font weight for section titles */
-    margin: var(--section-title-margin); /* Set margin for section titles */
-    color: var(--section-title-color); /* Set color for section titles */
-}
-
-.section-tagline {
-    color: var(--color-primary); /* Set color for section taglines */
-    font-family: var(--font-family-title); /* Set font family for section taglines */
-    text-transform: var(--section-tagline-transform); /* Transform text for section taglines */
-    font-weight: var(--font-weight-bold); /* Set font weight for section taglines */
-    margin: var(--section-tagline-margin); /* Set margin for section taglines */
-}
-
-.container {
-    width: 960px; /* Set container width */
-    margin-left: auto; /* Center container horizontally */
-    margin-right: auto; /* Center container horizontally */
-}
-
-.card-category {
-    color: var(--color-primary); /* Set color for card categories */
 }
 
 .navbar-menu {
@@ -155,60 +271,281 @@ a:active {
 
 .nav .nav-link {
     display: block; /* Set display for nav links */
-    padding: calc(0.5 * 1rem) 1rem; /* Set padding for nav links */
+    padding: 0.5rem 1rem;Certainly! Here are the comments added to the provided CSS code:
+
+```css
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15; /* Improved text rendering */
+    -webkit-text-size-adjust: 100%; /* Prevents font size adjustments after orientation changes in iOS */
 }
 
-.nav .nav-link:hover {
-    color: var(--nav-item-link-hover); /* Set hover color for nav links */
+body {
+    margin: 0; /* Remove default margin */
 }
 
-ul .row {
-    margin: 0; /* Remove margin from rows in ul */
-    padding: 0; /* Remove padding from rows in ul */
-    list-style-type: none; /* Remove list style from rows in ul */
+main {
+    display: block; /* Define main as a block element */
 }
 
-.row::after {
-    content: none; /* Clear floats for rows */
-    display: table; /* Clear floats for rows */
-    clear: both; /* Clear floats for rows */
+h1 {
+    font-size: 2em; /* Set font size for h1 */
+    margin: .67em 0; /* Set margin for h1 */
 }
 
-[class^="col-"] {
-    float: left; /* Float columns to the left */
-    padding: 0.5rem; /* Set padding for columns */
+hr {
+    box-sizing: content-box; /* Ensure hr respects box-sizing */
+    height: 0; /* Remove default height */
+    overflow: visible; /* Ensure hr overflows are visible */
 }
 
-.col-1-3 {
-    width: 33.33%; /* Set width for 1/3 columns */
+pre {
+    font-family: monospace, monospace; /* Use monospaced font for pre */
+    font-size: 1em; /* Set font size for pre */
 }
 
-.col-1-2 {
-    width: 50%; /* Set width for 1/2 columns */
+a {
+    background-color: transparent; /* Remove background color from links */
 }
 
-.footer {
-    padding: var(--footer-padding); /* Set padding for footer */
+abbr[title] {
+    border-bottom: none; /* Remove default border from abbr */
+    text-decoration: underline; /* Add underline to abbr */
+    text-decoration: underline dotted; /* Add dotted underline to abbr */
 }
 
-.footer-copyright {
-    margin: 0; /* Remove margin from footer copyright */
-    font-size: var(--font-size-small); /* Set font size for footer copyright */
-    color: var(--text-color); /* Set color for footer copyright */
+b, strong {
+    font-weight: bolder; /* Set bold weight for b and strong */
 }
 
-footer ul {
-    text-align: right; /* Align footer ul to the right */
+code, kbd, samp {
+    font-family: monospace, monospace; /* Use monospaced font for code, kbd, and samp */
+    font-size: 1em; /* Set font size for code, kbd, and samp */
 }
 
-.footer-address {
-    color: var(--text-color); /* Set color for footer address */
+small {
+    font-size: 80%; /* Set font size for small */
 }
 
-.social-link {
-    display: block; /* Set display for social links */
+sub, sup {
+    font-size: 75%; /* Set font size for sub and sup */
+    line-height: 0; /* Remove line height for sub and sup */
+    position: relative; /* Set relative position for sub and sup */
+    vertical-align: baseline; /* Align sub and sup to baseline */
 }
 
-.social-link svg {
-    fill: var(--text-color); /* Set fill color for social link SVGs */
+sub {
+    bottom: -.25em; /* Position sub lower */
+}
+
+sup {
+    top: -.5em; /* Position sup higher */
+}
+
+img {
+    border-style: none; /* Remove border from images */
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit; /* Inherit font family */
+    font-size: 100%; /* Inherit font size */
+    line-height: 1.15; /* Set line height */
+    margin: 0; /* Remove default margin */
+}
+
+button, input {
+    overflow: visible; /* Allow overflow for button and input */
+}
+
+button, select {
+    text-transform: none; /* Prevent text transformation for button and select */
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button; /* Use default button appearance */
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+    border-style: none; /* Remove inner border */
+    padding: 0; /* Remove inner padding */
+}
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+    outline: 1px dotted ButtonText; /* Add dotted outline for focus */
+}
+
+fieldset {
+    padding: .35em .75em .625em; /* Set padding for fieldset */
+}
+
+legend {
+    box-sizing: border-box; /* Ensure legend respects box-sizing */
+    color: inherit; /* Inherit color for legend */
+    display: table; /* Display legend as table */
+    max-width: 100%; /* Set max-width for legend */
+    padding: 0; /* Remove padding for legend */
+    white-space: normal; /* Normalize white space for legend */
+}
+
+progress {
+    vertical-align: baseline; /* Align progress to baseline */
+}
+
+textarea {
+    overflow: auto; /* Add auto overflow for textarea */
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box; /* Ensure checkbox and radio respect box-sizing */
+    padding: 0; /* Remove padding for checkbox and radio */
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto; /* Set height for number spin buttons */
+}
+
+[type=search] {
+    -webkit-appearance: textfield; /* Use default textfield appearance */
+    outline-offset: -2px; /* Offset outline for search */
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none; /* Remove search decoration */
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* Use default button appearance for file upload */
+    font: inherit; /* Inherit font properties */
+}
+
+details {
+    display: block; /* Display details as block */
+}
+
+summary {
+    display: list-item; /* Display summary as list-item */
+}
+
+template {
+    display: none; /* Hide template element */
+}
+
+[hidden] {
+    display: none; /* Hide hidden elements */
+}
+
+/* Define CSS variables for colors, fonts, sizes, and other reusable values */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    --font-family-base: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    --font-family-title: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-primary);
+
+    --section-tagline-margin: 0;
+}
+
+/* Apply box-sizing: border-box to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 62.5%; /* Set base font size to 10px for easier rem calculations */
+}
+
+body {
+    font-family: var(--font-family-base); /* Set base font family */
+    font-size: var(--font-size-medium); /* Set base font size */
+    font-weight: var(--font-weight-regular); /* Set base font weight */
+    line-height: var(--line-height-base); /* Set base line height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Set font family for headings */
+    font-weight: var(--font-weight-bold); /* Set font weight for headings */
+}
+
+body {
+    color: var(--text-color); /* Set text color */
+}
+
+a:link {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--text-color); /* Set link color */
+}
+
+a:visited {
+    font-style: italic; /* Italicize visited links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+a:active {
+    background-color: var(--color-light-grey); /* Set background color for active links */
+}
+
+.navbar-menu {
+    float: right; /* Float navbar menu to the right */
+}
+
+.nav {
+    margin: 0; /* Remove margin from nav */
+    padding: 0; /* Remove padding from nav */
+    list-style: none; /* Remove list style from nav */
+    text-align: center; /* Center nav items */
+}
+
+.nav .nav-item {
+    font-family: var(--nav-item-font-family); /* Set font family for nav items */
+    font-weight: var(--nav-item-font-weight); /* Set font weight for nav items */
+    font-size: var(--nav-item-font-size); /* Set font size for nav items */
+    letter-spacing: var(--nav-item-letter-spacing); /* Set letter spacing for nav items */
+    display: var(--nav-item-display); /* Set display for nav items */
+    margin: var(--nav-item-margin); /* Set margin for nav items */
+}
+
+.nav .nav-link {
+    display: block; /* Set display for nav links */
+    padding: 0.5rem 1rem;
 }
