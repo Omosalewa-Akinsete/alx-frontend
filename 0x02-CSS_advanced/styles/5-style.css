@@ -1,55 +1,49 @@
-/* Target the root element and define custom properties */
-:root {
-  --color-primary: #d73953;
-  --color-black: #090909;
-  --color-white: #ffffff;
-  --color-light-grey: #f3f3f3;
-  --color-dark-grey: #353535;
-  --text-color: var(--color-black);
-  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  
-  /* Custom font sizes */
-  --font-size-small: 1.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-large: 1.8rem;
-  --font-size-x-large: 2.3rem;
-  --font-size-xx-large: 4.8rem;
-}
-
-/* Set base font size for rem calculations */
+/* Set smooth scrolling behavior for the entire document */
 html {
-  font-size: 62.5%; /* 62.5% of the browser default, which typically equals 10px */
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* Set the base font size to 62.5% (equivalent to 10px in most browsers) */
 }
 
-/* Set body font size to font-size-medium */
+/* Define custom properties at the root level */
+:root {
+    --color-primary: #d73953; /* Define primary color */
+    --color-black: #090909; /* Define black color */
+    --color-white: #ffffff; /* Define white color */
+    --color-light-grey: #f3f3f3; /* Define light grey color */
+    --color-dark-grey: #353535; /* Define dark grey color */
+    --text-color: var(--color-black); /* Define text color using the black color */
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Define base font family */
+    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Define font family for section headings */
+    --font-size-small: 1.2rem; /* Define small font size */
+    --font-size-medium: 1.6rem; /* Define medium font size */
+    --font-size-large: 1.8rem; /* Define large font size */
+    --font-size-x-large: 2.3rem; /* Define extra large font size */
+    --font-size-xx-large: 4.8rem; /* Define double extra large font size */
+}
+
+/* Apply font family to all heading elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Use the title font family for headings */
+}
+
+/* Set body styles */
 body {
-  font-size: var(--font-size-medium);
+    color: var(--text-color); /* Use text color for body text */
+    font-family: var(--font-family-base); /* Use base font family for body text */
+    font-size: var(--font-size-medium); /* Set medium font size for body text */
 }
 
-/* Set font sizes for specific elements based on your requirements */
-h1 {
-  font-size: var(--font-size-xx-large);
+/* Style anchor (link) elements */
+a {
+    color: var(--text-color); /* Use text color for links */
 }
 
-h2 {
-  font-size: var(--font-size-x-large);
+/* Hide visually-hidden elements */
+.visually-hidden {
+    display: none; /* Hide elements with this class visually */
 }
 
-h3 {
-  font-size: var(--font-size-large);
+/* Style elements with class card-category and section-tagline */
+.card-category, .section-tagline {
+    color: var(--color-primary); /* Use primary color for elements with these classes */
 }
-
-h4 {
-  font-size: var(--font-size-medium);
-}
-
-h5 {
-  font-size: var(--font-size-medium);
-}
-
-h6 {
-  font-size: var(--font-size-small);
-}
-
-/* Additional styles for body or other elements as needed */
