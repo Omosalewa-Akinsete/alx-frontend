@@ -1,0 +1,78 @@
+/* Base styles from styles/30-style.css */
+
+/* ... [existing styles] ... */
+
+/* Styles for card-outer within card-work */
+.card-work .card-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styles for images inside card-image within card-work */
+.card-work .card-image img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+/* Styles for card-inner within card-work */
+.card-work .card-inner {
+    position: absolute;
+    top: -0.1rem;
+    left: -0.1rem;
+    right: -0.1rem;
+    z-index: 1;
+}
+
+/* Hover effect for card-inner within card-work */
+.card-work:hover .card-inner {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Styles for card-title within card-work */
+.card-work .card-title {
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    height: 100%;
+    position: relative;
+}
+
+/* Styles for links within card-title and card-work */
+.card-work .card-title a {
+    display: block;
+    text-decoration: none;
+    padding-top: 45%;
+}
+
+/* After pseudo-element for links within card-title and card-work */
+.card-work .card-title a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for card-title within card-work */
+.card-work:hover .card-title {
+    opacity: 1;
+}
+
+/* Styles for card-quote inside card-testimonial */
+.card-testimonial .card-quote {
+    position: relative;
+}
+
+/* Styles for before pseudo-element of card-quote inside card-testimonial */
+.card-testimonial .card-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -4.5rem;
+    left: -1rem;
+    color: #efeded;
+    font-size: 10rem;
+    z-index: -1;
+}
