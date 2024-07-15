@@ -7,7 +7,7 @@
 
 /* Basic HTML styles */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
     font-size: 62.5%; /* 1rem = 10px for easier rem calculations */
 }
 
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Link styles */
 a:link {
     color: var(--text-color);
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
 }
 
 a:visited {
@@ -103,7 +103,7 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline links on hover */
 }
 
 a:active {
@@ -128,7 +128,7 @@ a:active {
 
 /* Visually hidden class */
 .visually-hidden {
-    display: none;
+    display: none; /* Hide elements visually */
 }
 
 /* Dark theme styles for sections */
@@ -137,6 +137,24 @@ a:active {
     --section-title-color: var(--color-white);
     background-color: var(--color-black);
     --button-color: var(--color-white);
+}
+
+/* Header styles */
+.header {
+    padding: var(--header-padding);
+}
+
+/* Header logo styles */
+.header-logo {
+    position: var(--header-logo-position);
+}
+
+/* Link inside the header logo styles */
+.header-logo a {
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
 }
 
 /* Section styles */
@@ -235,23 +253,26 @@ a:active {
     padding: calc(0.5 * 1rem) 1rem;
 }
 
+/* Hover effect for navigation link */
+.nav .nav-link:hover {
+    color: var(--nav-item-link-hover);
+}
+
+/* ::before pseudo-element for navigation link */
 .nav .nav-link::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    background-color: var(--color-white);
     width: 0;
     height: 20%;
-    background-color: var(--color-white);
 }
 
-.nav .nav-link:hover::before {
-    width: 100%;
+/* Hover effect for ::before pseudo-element */
+.nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
-}
-
-.nav .nav-link:hover {
-    color: var(--nav-item-link-hover);
+    width: 100%;
 }
 
 /* Row styles */
@@ -330,7 +351,7 @@ ul .row {
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
-    color: var (--text-color);
+    color: var(--text-color);
 }
 
 /* Footer unordered list styles */
@@ -351,22 +372,4 @@ footer ul {
 /* Social link SVG styles */
 .social-link svg {
     fill: var(--text-color);
-}
-
-/* Header styles */
-.header {
-    padding: var(--header-padding);
-}
-
-/* Header logo styles */
-.header-logo {
-    position: var(--header-logo-position);
-}
-
-/* Link inside the header logo styles */
-.header-logo a {
-    display: var(--header-logo-link-display);
-    position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
 }
