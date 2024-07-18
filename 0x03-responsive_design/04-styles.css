@@ -314,11 +314,6 @@
       }
   }
 
-  /* Example of using the --nav-item-margin variable */
-  .nav-item {
-      margin: var(--nav-item-margin);
-  }
-  
   /* Header
       ============================= */
   
